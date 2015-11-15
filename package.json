@@ -1,0 +1,36 @@
+{
+  "name": "baseplate",
+  "version": "0.0.1",
+  "description": "A sweet front end starter kit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/superfunkminister/baseplate"
+  },
+  "keywords": [
+    "some",
+    "keywords",
+    "here"
+  ],
+  "author": "Piers Olenski",
+  "license": "FO FREE",
+  "devDependencies": {
+    "browser-sync": "*",
+    "chalk": "*",
+    "del": "^2.0.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "*",
+    "gulp-inline-source": "^2.1.0",
+    "gulp-main-bower-files": "^1.2.5",
+    "gulp-minify-css": "*",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "*"
+  }
+}

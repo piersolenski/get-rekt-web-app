@@ -1,0 +1,5 @@
+.qrcode {
+    @extend %center;
+    border: $baseline/2 solid $white;
+    width: 62%;
+}

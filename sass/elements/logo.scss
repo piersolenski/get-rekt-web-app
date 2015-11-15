@@ -1,0 +1,9 @@
+.logo {
+    @extend %epic-shadow;
+    transform: rotate(-2.5deg);
+    width: 100%;
+    text-align: center;
+    font-size: 8vw;
+    position: absolute;
+    margin: $baseline 0;
+}

@@ -1,0 +1,54 @@
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+%hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+%left {
+    float: left;
+}
+
+%right {
+    float: right;
+}
+
+%center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%text-centered {
+    text-align: center;
+}
+
+%epic-shadow {
+    text-shadow: 0px 1px 0px #999,
+                 0px 2px 0px #888,
+                 0px 3px 0px #777,
+                 0px 4px 0px #666,
+                 0px 5px 0px #555,
+                 0px 6px 0px #444,
+                 0px 7px 0px #333,
+                 0px 8px 7px #001135;
+}
+
+%pseudo-element {
+    position: absolute;
+    display: block;
+    content: '';
+}
+
+%unstyled-list {
+    padding: 0;
+    list-style: none;
+}

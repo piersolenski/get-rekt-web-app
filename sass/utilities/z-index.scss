@@ -1,0 +1,23 @@
+$z-order: project-covers, sorting-bar;
+
+// To be used as such
+
+// Input:
+
+// .project-cover {
+//    z-index: index($z-order, project-covers);
+// }
+
+// .sorting-bar {
+//    z-index: index($z-order, sorting-bar);
+// }
+
+// Output:
+
+// .project-cover {
+//     z-index: 1;
+// }
+
+// .sorting-bar {
+//     z-index: 2;
+// }

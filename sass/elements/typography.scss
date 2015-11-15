@@ -1,0 +1,11 @@
+h1, h2, h3, h4, h5, h6,
+ul, ol, dd,
+p, p:last-child,
+pre, table, fieldset, hr {
+    margin-top: 0;
+    margin-bottom: $baseline;
+}
+
+p {
+    margin-bottom: $baseline / 2;
+}
