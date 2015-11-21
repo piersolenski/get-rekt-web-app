@@ -1,17 +1,19 @@
-angular.module("elHacko").controller("LandingCtrl", function($scope, WebSocket, CONFIG, $window, $location){
+angular.module("elHacko").controller("LandingCtrl", function($scope, CONFIG, $window, $location, $wamp, GetUuid){
 
-	$scope.qrCode = "0e49aecf-67c4-45f2-8d04-077840e8d60a";
-	$location.search("id", "0e49aecf-67c4-45f2-8d04-077840e8d60a");
-
-	function onScan() {
-		$location.path("countdown");
-		$scope.$apply();
+	function onScanWsCallback(event) {
+		console.log(event);
+		var message = JSON.parse(event[0]);
+		if (message.status === "countdown_started") {
+			$location.path("countdown");
+			$scope.$apply();
+		}
 	}
 
-	// WebSocket.setCallback(function(evt) {
-	// 	var data = JSON.parse(evt.data);
-	// 	$scope.qrCode = data.id;
-	// $location.search("id", data.id);
-	// });
+	GetUuid.get().then(function(res) {
+		console.log(res);
+		$location.search("uuid", res);
+		$scope.qrCode = res;
+		$wamp.subscribe(res, onScanWsCallback);
+	});
 
 });

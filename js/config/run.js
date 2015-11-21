@@ -1,3 +1,3 @@
-angular.module("elHacko").run(function(CONFIG, WebSocket) {
-    WebSocket.start(CONFIG["web_socket"]);
+angular.module("elHacko").run(function($wamp) {
+    $wamp.open();
 });

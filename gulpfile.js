@@ -16,7 +16,7 @@ var minifyHTML = require('gulp-minify-html');
 var inlinesource = require('gulp-inline-source');
 var packageJson = require('./package.json');
 var sourcemaps = require('gulp-sourcemaps');
-var babel = require('gulp-babel');
+// var babel = require('gulp-babel');
 
 gulp.task('browser-sync', function() {
     browserSync({
@@ -69,6 +69,8 @@ gulp.task('scripts', function() {
         'bower_components/angular/angular.js',
         'bower_components/angular-route/angular-route.js',
         'bower_components/angular-qrcode/angular-qrcode.js',
+        'bower_components/autobahn/autobahn.js',
+        'bower_components/angular-wamp/release/angular-wamp.js',
         'js/*.js',
         'js/**/*.js'
     ];

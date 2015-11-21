@@ -1,11 +1,11 @@
 <div ng-if="!imageReady" class="spinner">
-    <img class="spinner__icon" src="img/spinner.png" alt="Loading" />
+    <img class="spinner__icon" ng-src="{{imageUrl}}" alt="Loading" />
     <p>Loading...</p>
 </div>
-<img ng-if="imageReady" class="result" src="http://lorempixel.com/900/500/animals/?{{id}}" alt="Ellis App" />
-<nav ng-if="imageReady" class="result-options">
-    <a class="button">Share</a>
-    <a class="button" href="#/landing">Retake</a>
-</nav>
-
-<!-- <share-tags souvenir="{{id}}"></share-tags> -->
+<div class="result">
+    <img ng-if="imageReady" class="result" src="http://lorempixel.com/900/500/animals/?{{id}}" alt="Ellis App" />
+    <nav ng-if="imageReady" class="result-options">
+        <a class="button">Share</a>
+        <a class="button" href="#/landing">Retake</a>
+    </nav>
+</div>

@@ -1,2 +1,16 @@
-<h3 class="countdown" beep="count" burst-animation>{{count}}</h3>
-<h2 class="instruction">Get ready to <br>get Rekt!</h2>
+<h3 ng-if="countingDown" class="countdown" burst-animation>{{count}}</h3>
+<h2 ng-if="countingDown" class="instruction">Get ready to<br>get Rekt!</h2>
+
+<div ng-if="loading" class="spinner">
+    <img class="spinner__icon" src="img/spinner.png" alt="Loading" />
+    <p>Loading...</p>
+</div>
+
+<div ng-if="imageUrl" class="result">
+    <img ng-src="{{imageUrl}}" alt="Ellis App" />
+    <nav class="result-options">
+        <!-- <a class="button">Share</a> -->
+        <a class="button" href="#/landing">Retake</a>
+        <a class="button" href="{{imageUrl}}" download>Download</a>
+    </nav>
+</div>

@@ -9,7 +9,7 @@ angular.module("elHacko").directive("burstAnimation", function($timeout) {
 
             function triggerAnimation() {
                 elem.removeClass("countdown-animation");
-                forceReflow(elem[0]);
+                // forceReflow(elem[0]);
                 elem.addClass("countdown-animation");
             }
 

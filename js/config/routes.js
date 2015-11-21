@@ -4,15 +4,12 @@ angular.module("elHacko").config(function($routeProvider, $provide) {
     $routeProvider
     .when("/", {
         templateUrl : "views/landing.html",
-        controller  : "LandingCtrl"
+        controller  : "LandingCtrl",
+        reloadOnSearch: false
     })
     .when("/countdown", {
         templateUrl : "views/countdown.html",
         controller  : "CountdownCtrl"
-    })
-    .when("/result", {
-        templateUrl : "views/result.html",
-        controller  : "ResultCtrl"
     })
     .otherwise({
         redirectTo  : "/"
